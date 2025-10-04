@@ -99,7 +99,7 @@ const grid = document.getElementById('grid');
 // Fetch and display articles from the JSON file
 async function loadArticles() {
   try {
-    const response = await fetch('/assets/articles.json');
+    const response = await fetch('assets/articles.json');
     const articles = await response.json();
 
     // ✅ Sort by date (newest first)
@@ -126,5 +126,6 @@ async function loadArticles() {
     grid.innerHTML = '<p>Failed to load articles.</p>';
   }
 }
+
 
 loadArticles();
