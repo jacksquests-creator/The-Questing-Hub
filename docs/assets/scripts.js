@@ -93,39 +93,70 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Article grid population
+// --- Article Grid Population ---
 const grid = document.getElementById('grid');
 
-// Fetch and display articles from the JSON file
+// --- Detect Which Tag This Page Should Show ---
+function getTagForPage() {
+  const path = window.location.pathname.toLowerCase();
+  if (path.includes('guide')) return 'guide';
+  if (path.includes('review')) return 'review';
+  if (path.includes('feature')) return 'feature';
+  return null; // Default = index page
+}
+
+// --- Render Article Cards ---
+function renderArticles(articles) {
+  grid.innerHTML = '';
+
+  if (!articles.length) {
+    grid.innerHTML = `<p>No articles found for this page.</p>`;
+    return;
+  }
+
+  articles.forEach(article => {
+    const card = document.createElement('div');
+    card.className = 'article';
+
+    const tagsHTML = article.tags
+      ? article.tags.map(t => `<a href="${t}.html" class="tag">${t}</a>`).join(' ')
+      : '';
+
+    card.innerHTML = `
+      <a href="${article.link}">
+        <img src="${article.image}" alt="${article.title}">
+        <h2>${article.title}</h2>
+        <p>${article.description}</p>
+      </a>
+      <div class="tags">${tagsHTML}</div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+// --- Fetch and Display Articles ---
 async function loadArticles() {
   try {
     const response = await fetch('assets/articles.json');
     const articles = await response.json();
 
-    // ✅ Sort by date (newest first)
+    // Sort by newest first
     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    grid.innerHTML = '';
+    // Filter by tag (if applicable)
+    const tag = getTagForPage();
+    const filtered = tag
+      ? articles.filter(a => a.tags?.includes(tag))
+      : articles;
 
-    articles.forEach(article => {
-      const card = document.createElement('div');
-      card.className = 'article';
-
-      card.innerHTML = `
-        <a href="${article.link}">
-          <img src="${article.image}" alt="${article.title}">
-          <h2>${article.title}</h2>
-          <p>${article.description}</p>
-        </a>
-      `;
-
-      grid.appendChild(card);
-    });
+    renderArticles(filtered);
   } catch (error) {
     console.error('Error loading articles:', error);
     grid.innerHTML = '<p>Failed to load articles.</p>';
   }
 }
 
-
+// --- Initialize ---
 loadArticles();
+// --- END Article Grid Population ---
