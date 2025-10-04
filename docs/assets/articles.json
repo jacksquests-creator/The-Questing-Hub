@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Goblin Cleanup: Early Access Review",
+    "description": "A review of Team 17's latest addition, that brings fresh joy to the cleaning simulator genre.",
+    "image": "/assets/images/Goblin Cleanup images/152293_Goblin_Cleanup.webp",
+    "link": "/posts/reviews/goblin-cleanup-review.html",
+    "date": "2025-10/02"
+  },
+  {
+    "title": "Using the Grid Layout",
+    "description": "Learn how this 3-column layout works responsively.",
+    "image": "images/article2.jpg",
+    "link": "articles/article2.html",
+    "date" : "2024-09-15"
+  },
+  {
+    "title": "Deploying on Netlify",
+    "description": "How to get this whole thing online in minutes.",
+    "image": "images/article3.jpg",
+    "link": "articles/article3.html",
+    "date" : "2024-10-04"
+  }
+  
+]
