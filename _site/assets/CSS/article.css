@@ -1,0 +1,56 @@
+/* ==========================
+   ARTICLE PAGE
+   ========================== */
+
+.title {
+  max-width: 800px;
+  margin: 2em auto;
+  text-align: center;
+}
+.title .subtitle {
+  font-style: italic;
+  color: #787575a2;
+}
+
+/* Article content blocks */
+.body, .quick-review {
+  max-width: 800px;
+  padding: 2em;
+  background: #1f1d2e;
+  border: 1px solid #45a29e;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(178, 148, 255, 0.3);
+  margin: 0 auto;
+}
+
+/* Page layout */
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+  position: relative;
+}
+.content {
+  flex: 1;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.content-sidebar {
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px;
+  width: 300px;
+  align-self: flex-start;
+  height: fit-content;
+}
+
+.content-sidebar img {
+  width: 100%;          /* fills sidebar width */
+  height: auto;         /* maintains aspect ratio */
+  max-height: 250px;    /* ✅ set your preferred maximum height */
+  object-fit: cover;    /* crops slightly instead of stretching */
+  border-radius: 8px;   /* optional: matches your rounded style */
+  display: block;
+  margin: 0 auto 1rem;  /* centers and spaces images */
+}

@@ -1,0 +1,38 @@
+/* ==========================
+   RESPONSIVE DESIGN
+   ========================== */
+
+@media (max-width: 900px) {
+  .page-layout {
+    flex-direction: column;
+  }
+  .content {
+    margin-right: 0;
+  }
+  .content-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .scroll-card {
+    flex: 0 0 90%;
+  }
+  .main-nav a {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9em;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}

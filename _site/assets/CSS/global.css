@@ -1,0 +1,60 @@
+/* ==========================
+   GLOBAL STYLES
+   ========================== */
+
+body {
+  font-family: 'Cinzel', sans-serif;
+  background: #0b0c10;
+  color: #e5d9f2;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  text-align: center;
+  margin: 1.5em auto 0.5em;
+  color: #f8f1e9;
+  text-shadow: 2px 2px #3d348b;
+}
+
+p, ul, ol, li {
+  text-align: left;
+}
+
+/* Links */
+a {
+  color: #45a29e;
+  text-decoration: none;
+}
+a:hover {
+  color: #f8f1e9;
+}
+a:visited {
+  color: #b294ff;
+}
+
+/* Media */
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 8px;
+}
+
+figure {
+  text-align: center;
+  margin: 1.5em auto;
+}
+figcaption {
+  font-size: 0.9em;
+  color: grey;
+  margin-top: 0.5em;
+  font-style: italic;
+}
