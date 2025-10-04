@@ -124,24 +124,28 @@
 /* Article Grid */
 .grid-container {
   display: flex;
-  justify-content: center; /* centers grid horizontally */
+  justify-content: center; /* centers the whole grid on the page */
   margin-top: 2em;
   width: 100%;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
-  gap: 1.5rem;
-  justify-content: center; /* ensures grid items themselves are centered */
-  width: fit-content; /* shrink grid to its content width */
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+  gap: 1.5rem; /* spacing between cards */
+  max-width: 1000px; /* centers within a nice width */
+  width: 90%; /* keeps it responsive */
+  justify-items: center; /* center each card in its grid cell */
 }
+
 .article {
   background: #1f1d2e;
   border: 1px solid #45a29e;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  width: 100%; /* fill grid cell width */
+  max-width: 300px; /* consistent card width */
 }
 .article:hover {
   transform: translateY(-5px);
