@@ -8,58 +8,66 @@
   font-size: 1.2em;
 }
 
-/* Scroll Cards */
 .scroll-wrapper {
   position: relative;
   margin: 2em auto;
-  max-width: 800px; /* fixed width */
-  overflow: hidden; /* hide scrollbar + peeking cards */
+  width: 800px;
+  /* or max-width: 800px; if you want it to shrink on smaller viewports */
+  overflow: hidden;
 }
 
 .scroll-container {
   display: flex;
-  overflow-x: hidden; /* fully hides scrollbar */
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  gap: 0; /* no gap between cards */
 }
 
 .scroll-card {
-  flex: 0 0 100%; /* only one card fills wrapper */
+  flex: 0 0 100%;
+  width: 100%;
   max-width: 800px;
   background: #1f1d2e;
   border: 1px solid #45a29e;
   border-radius: 12px;
-  padding: 1.5em;
+  padding: 1em; /* reduce padding if you want less interior space */
   scroll-snap-align: center;
 
   display: flex;
   align-items: center;
-  gap: 1.5em;
+  gap: 1em;
+  box-sizing: border-box;
+  
+  /* Optional: set a max-height if you want a fixed height */
+  max-height: 400px; /* adjust as needed */
+  overflow: hidden; /* hide any overflow inside card */
 }
 
 .scroll-card img {
   width: 50%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
   object-fit: cover;
-  order: 0; /* image first (left side) */
+  border-radius: 8px;
+  flex-shrink: 0; /* don’t let it shrink smaller */
 }
 
 .scroll-card .card-text {
   width: 50%;
-  order: 1; /* text second (right side) */
-  color: #ccc;
+  /* if needed, constrain height or scroll inside text */
+  overflow: auto;
 }
 
-.scroll-card h3 {
-  margin-top: 0;
-  color: #fff;
+.scroll-btn {
+  /* same as before – for navigation buttons */
 }
 
-.scroll-card p {
-  font-size: 0.95em;
-  line-height: 1.4;
+/* Hide scrollbar inside container if necessary */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Scroll Buttons */
