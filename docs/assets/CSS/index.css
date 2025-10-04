@@ -123,12 +123,18 @@
 
 /* Article Grid */
 .grid-container {
+  display: flex;
+  justify-content: center; /* centers grid horizontally */
   margin-top: 2em;
+  width: 100%;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 1.5rem;
+  justify-content: center; /* ensures grid items themselves are centered */
+  width: fit-content; /* shrink grid to its content width */
 }
 .article {
   background: #1f1d2e;
