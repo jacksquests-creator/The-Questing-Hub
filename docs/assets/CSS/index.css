@@ -56,11 +56,6 @@
   /* if needed, constrain height or scroll inside text */
   overflow: auto;
 }
-
-.scroll-btn {
-  /* same as before – for navigation buttons */
-}
-
 /* Hide scrollbar inside container if necessary */
 .scroll-container::-webkit-scrollbar {
   display: none;
