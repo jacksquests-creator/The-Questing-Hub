@@ -118,7 +118,7 @@
 
 /* --- ARTICLE GRID --- */
 .grid-container {
-  margin: 2em auto;
+  margin: 1em auto;
   max-width: 1200px;
   padding: 0 1em;
 }
@@ -133,12 +133,25 @@
 
 /* --- ARTICLE CARD --- */
 .article {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 800px;
   background: #1f1d2e;
   border: 1px solid #45a29e;
   border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  padding: 1em; /* reduce padding if you want less interior space */
+  scroll-snap-align: center;
+
+  display: flex;
+  align-items: center;
+  gap: 1em;
   box-sizing: border-box;
+  
+  /* Optional: set a max-height if you want a fixed height */
+  max-height: 400px; /* adjust as needed */
+  overflow: hidden; /* hide any overflow inside card */
+
+  position: relative; /* Needed for absolutely positioning the tag */
 }
 
 .article:hover {
@@ -160,10 +173,11 @@
 .article img {
   width: 40%;
   height: 100%;
-  aspect-ratio: 4 / 3;     /* consistent aspect */
   object-fit: cover;
-  border-radius: 8px;
   flex-shrink: 0;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden ;
 }
 
 /* --- TEXT --- */
@@ -172,7 +186,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  object-fit: cover;
   flex: 1;                 /* fills the rest of the row */
+  padding-right: 0.5em;  /* space between text and right edge */
   min-width: 0;            /* allows text wrapping inside flexbox */
 }
 
@@ -190,32 +206,41 @@
 }
 
 .article p {
-  margin: 0;
   font-size: 0.85rem;
   color: #ccc;
-  line-height: 1.4;
+  margin: 0;
 }
 
 /* --- TAGS --- */
 .article .tags {
-  margin: 0.5em 0 0.5em 0.75em;
+ position: absolute;
+ bottom: 0.75em;
+ left: 0.75em;
+ margin: 0;
+ z-index: 2;
 }
 
-.tag {
+.article .tag {
   display: inline-block;
   background: #45a29e;
   color: #1f1d2e;
-  padding: 3px 8px;
   border-radius: 8px;
+  padding: 0.25em 0.6em;
   margin-right: 6px;
   font-size: 0.8em;
   text-decoration: none;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .tag:hover {
   background: #66fcf1;
   color: #0b0c10;
+  opacity: 1;
 }
+
+
+
 
 /* --- RESPONSIVE BEHAVIOR --- */
 @media (max-width: 900px) {
