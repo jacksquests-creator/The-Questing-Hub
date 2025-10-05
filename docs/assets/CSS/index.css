@@ -116,65 +116,126 @@
   background: #45a29e;
 }
 
-/* Article Grid */
+/* --- ARTICLE GRID --- */
 .grid-container {
-  display: flex;
-  justify-content: center; /* centers the whole grid on the page */
-  margin-top: 2em;
-  width: 100%;
+  margin: 2em auto;
+  max-width: 1200px;
+  padding: 0 1em;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
-  gap: 1.5rem; /* spacing between cards */
-  max-width: 1000px; /* centers within a nice width */
-  width: 90%; /* keeps it responsive */
-  justify-items: center; /* center each card in its grid cell */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* --- ARTICLE CARD --- */
 .article {
   background: #1f1d2e;
   border: 1px solid #45a29e;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  width: 100%; /* fill grid cell width */
-  max-width: 300px; /* consistent card width */
+  box-sizing: border-box;
 }
+
 .article:hover {
   transform: translateY(-5px);
 }
-.article img {
+
+.article a {
+  display: flex;
+  align-items: stretch;   /* Make image + text fill same vertical height */
   width: 100%;
-  border-bottom: 1px solid #45a29e;
-}
-.article h2 {
-  padding: 1em;
-}
-.article p {
-  padding: 0 1em 1em;
-  font-size: 0.9em;
-  color: #ccc;
+  height: 100%;
+  gap: 1em;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.75em;
 }
 
-.tags {
-  margin-top: 8px;
+/* --- IMAGE --- */
+.article img {
+  width: 40%;
+  height: 100%;
+  aspect-ratio: 4 / 3;     /* consistent aspect */
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* --- TEXT --- */
+
+.article .card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;                 /* fills the rest of the row */
+  min-width: 0;            /* allows text wrapping inside flexbox */
+}
+
+.article h2 {
+  font-size: 1rem;
+  margin-bottom: 0.4em;
+  color: #fff;
+
+}
+
+.article h2,
+.article p {
+  overflow-wrap: break-word; /* ensures long words wrap */
+  word-break: break-word;    /* additional safeguard */
+}
+
+.article p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* --- TAGS --- */
+.article .tags {
+  margin: 0.5em 0 0.5em 0.75em;
 }
 
 .tag {
   display: inline-block;
-  background: #eee;
-  color: #333;
-  padding: 4px 8px;
+  background: #45a29e;
+  color: #1f1d2e;
+  padding: 3px 8px;
   border-radius: 8px;
   margin-right: 6px;
+  font-size: 0.8em;
   text-decoration: none;
-  font-size: 0.9em;
-  transition: background 0.2s;
 }
 
 .tag:hover {
-  background: #333;
-  color: #fff;
+  background: #66fcf1;
+  color: #0b0c10;
 }
+
+/* --- RESPONSIVE BEHAVIOR --- */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article a {
+    flex-direction: column;
+  }
+
+  .article img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
+

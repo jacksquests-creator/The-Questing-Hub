@@ -21,7 +21,7 @@
       <div class="image-container">
       <figure>
         <video autoplay loop muted playsinline>
-        <source src="/assets/videos/Goblin Cleanup/Goblin-Cleanup__oops_a_trap.mp4" type="video/mp4">
+        <source src="posts/reviews/assets/videos/Goblin Cleanup/Goblin-Cleanup__oops_a_trap.mp4" type="video/mp4">
         </video>
         <figcaption>Watch your step!</figcaption>
         </figure>
@@ -49,7 +49,7 @@
 There are no grand adventures or epic cutscenes—the story unfolds through the aftermath. Empty chests, overturned tables, cartoonish hunks of meat, and puddles of blood tell the tale of battles past.
 
 <figure>
-<img src="/assets/images/Goblin Cleanup images/goblin-cleanup-early-access-careful-which-chest-you-pick.JPG" alt="Goblin Cleanup Early Access, two chests, surrounded by blood and meat, one chest has teeth the other shines with gold">
+<img src="reviews/assets/images/Goblin Cleanup images/goblin-cleanup-early-access-careful-which-chest-you-pick.JPG" alt="Goblin Cleanup Early Access, two chests, surrounded by blood and meat, one chest has teeth the other shines with gold">
 <figcaption>Be careful which chest you choose, one has a few more teeth than the other</figcaption>
 </figure>
 
@@ -63,18 +63,18 @@ It’s a refreshing twist on the Fantasy Genre: you’re neither hero nor villai
 <div class="carousel">
   <div class="carousel-track">
     <!-- First set of images -->
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access customisation 1.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation full body look">
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 2.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation tails">
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 3.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation hairstyle">
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 4.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation colour changer">
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 5.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation showing that while nothing has been completed yet there is more to come">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access customisation 1.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation full body look">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 2.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation tails">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 3.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation hairstyle">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 4.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation colour changer">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 5.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation showing that while nothing has been completed yet there is more to come">
 
 <!-- Duplicate set for seamless scroll -->
- <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access customisation 1.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation full body look">
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 2.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation tails">
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 3.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation hairstyle">
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 4.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation colour changer">
-    <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 5.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation showing that while nothing has been completed yet there is more to come">
+<img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access customisation 1.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation full body look">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 2.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation tails">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 3.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation hairstyle">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 4.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation colour changer">
+    <img src="posts/reviews/assets/images/Goblin Cleanup images/goblin cleanup early access character customisation 5.jpg" alt="Goblin Cleanup Early Access, Goblin Maid customisation showing that while nothing has been completed yet there is more to come">
   </div>
 </div>
 <figcaption>Find your on Goblin Style</figcaption>
@@ -94,7 +94,7 @@ It’s a refreshing twist on the Fantasy Genre: you’re neither hero nor villai
 <figure>
 <div class="carousel">
   <div class="carousel-track">
-    <!-- First set of images -->
+    <!-- First set of images need to redo with new location for images-->
     <img src="/assets/images/Goblin Cleanup images/goblin clean up early access before cleanup.jpg" alt="Goblin Cleanup Early Access, goblin maid standing in front of dirty room">
     <img src="/assets/images/Goblin Cleanup images/goblin cleanup early acces no more meat.jpg" alt="Goblin Cleanup Early Access, goblin maid standing in front of mimic with no more meat left in the room">
     <img src="/assets/images/Goblin Cleanup images/goblin cleanup early access mopping up blood.jpg" alt="Goblin Cleanup Early Access, goblin maid mopping up blood with her Slimop">

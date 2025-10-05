@@ -121,15 +121,16 @@ function renderArticles(articles) {
     const tagsHTML = article.tags
       ? article.tags.map(t => `<a href="${t}.html" class="tag">${t}</a>`).join(' ')
       : '';
-
-    card.innerHTML = `
+card.innerHTML = `
       <a href="${article.link}">
-        <img src="${article.image}" alt="${article.title}">
-        <h2>${article.title}</h2>
-        <p>${article.description}</p>
-      </a>
-      <div class="tags">${tagsHTML}</div>
-    `;
+    <img src="${article.image}" alt="${article.title}">
+    <div class="card-text">
+      <h2>${article.title}</h2>
+      <p>${article.description}</p>
+    </div>
+  </a>
+  <div class="tags">${tagsHTML}</div>
+`;
 
     grid.appendChild(card);
   });
