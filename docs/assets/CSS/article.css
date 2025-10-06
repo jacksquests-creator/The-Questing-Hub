@@ -12,6 +12,20 @@
   color: #787575a2;
 }
 
+.post-meta {
+  font-size: 0.95rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 1px solid #c7a883; /* optional line like your image */
+  padding-top: 0.75rem;
+}
+
+.post-meta .separator {
+  color: #999;
+}
+
 /* Article content blocks */
 .body, .quick-review {
   max-width: 800px;
