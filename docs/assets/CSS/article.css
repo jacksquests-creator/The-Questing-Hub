@@ -41,6 +41,7 @@
 .page-layout {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 2rem;
   padding: 1rem;
   position: relative;
