@@ -78,7 +78,7 @@
 
 /* Center the main page layout */
 .layout-container {
-  max-width: 900px;      /* or whatever width looks good — try 800–1000px */
+  max-width: 1200px;      /* or whatever width looks good — try 800–1000px */
   margin: 0 auto;        /* centers it horizontally */
   padding: 0 1rem;       /* optional: adds breathing room on smaller screens */
   box-sizing: border-box;
