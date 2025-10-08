@@ -32,7 +32,7 @@
 
 /* Carousel */
 :root {
-  --scroll-speed: 20s;   /* adjust for faster/slower speed */
+  --scroll-speed: 10s;   /* adjust for faster/slower speed */
   --image-count: 5;      /* number of unique images */
 }
 
