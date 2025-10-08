@@ -31,11 +31,11 @@
 }
 
 :root {
-  --scroll-speed: 30s; /* slower = smoother */
-  --image-count: 5;    /* number of unique images */
+  --image-count: 5;
+  --scroll-speed: 30s;
 }
 
-/* Container */
+/* Outer container */
 .carousel {
   position: relative;
   width: 100%;
@@ -43,27 +43,33 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin: 2rem auto;
   border: 1px solid #45a29e;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* The track (image strip) */
+/* Track that scrolls */
 .carousel-track {
   display: flex;
-  width: calc(200%); /* one full set + one duplicate */
+  width: calc(200%); /* two full sets of 5 images */
   animation: scroll var(--scroll-speed) linear infinite;
 }
 
-/* Each image takes up 1/5 of the visible width */
-.carousel-track img {
+/* Each image container (slide) */
+.slide {
   flex: 0 0 calc(100% / var(--image-count));
+  height: 100%;
+}
+
+/* Image sizing */
+.slide img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Move exactly one set (half of the total width) */
+/* Animation — move exactly one set’s width (half the track) */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -74,11 +80,11 @@
 }
 
 /* Optional: pause on hover */
-.carousel-track:hover {
+.carousel:hover .carousel-track {
   animation-play-state: paused;
 }
 
-/* Mobile fix */
+/* Mobile tweaks */
 @media (max-width: 600px) {
   .carousel {
     aspect-ratio: auto;
