@@ -32,7 +32,7 @@
 
 :root {
   --image-count: 5;
-  --scroll-speed: 30s;
+  --scroll-speed: 15s;
 }
 
 /* Outer container */
@@ -67,6 +67,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  max-width: 800px;
 }
 
 /* Animation — move exactly one set’s width (half the track) */
