@@ -32,7 +32,7 @@
 
 :root {
   --image-count: 5;
-  --scroll-speed: 15s;
+  --scroll-speed: 40s;
 }
 
 /* Outer container */
@@ -55,12 +55,15 @@
   animation: scroll var(--scroll-speed) linear infinite;
   aspect-ratio: 16 / 9;
   max-width: 800px;
+  will-change: transform;
 }
 
 /* Each image container (slide) */
 .slide {
   flex: 0 0 calc(100% / var(--image-count));
   height: 100%;
+  object-fit: cover;
+  display: block ;
 }
 
 /* Image sizing */
