@@ -45,6 +45,13 @@
   gap: 2rem;
   padding: 1rem;
   position: relative;
+  flex-wrap: nowrap;
+}
+
+.page-layout main {
+    flex: 0 1 800px; /* lock content width */
+  max-width: 800px;
+  margin: 0 auto;
 }
 .content {
   flex: 1;
@@ -52,10 +59,9 @@
   max-width: 800px;
 }
 .content-sidebar {
-  flex-shrink: 0;
+  flex: 0 0 300px;
   position: sticky;
   top: 100px;
-  width: 300px;
   align-self: flex-start;
   height: fit-content;
 }
