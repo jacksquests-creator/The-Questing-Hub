@@ -29,7 +29,7 @@
 /* Article content blocks */
 .body, .quick-review {
   max-width: 800px;
-  padding: 2em;
+  padding: 0 1rem;
   background: #1f1d2e;
   border: 1px solid #45a29e;
   border-radius: 12px;
