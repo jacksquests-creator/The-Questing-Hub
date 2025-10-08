@@ -31,18 +31,63 @@
 }
 
 /* Carousel */
+:root {
+  --scroll-speed: 9s;   /* base speed per image */
+  --image-count: 5;     /* number of unique images in one set */
+}
+
+/* Outer carousel box */
 .carousel {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;        /* maintain 16:9 shape */
+  overflow: hidden;            /* hide anything outside */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 2rem auto;
+  border: 1px solid #45a29e;   /* fixed border syntax */
 }
+
+/* Image track (the long strip of images) */
 .carousel-track {
   display: flex;
-  transition: transform 0.4s ease-in-out;
+  width: max-content;          /* expands to fit all images */
+  animation: scroll linear infinite;
+  animation-duration: calc(var(--scroll-speed) * var(--image-count));
 }
-.carousel .card {
-  min-width: 300px;
-  margin: 0 10px;
+
+/* Images inside the track */
+.carousel-track img {
+  flex: 0 0 auto;              /* prevent shrinking */
+  width: 100%;                 /* each image fills carousel width */
+  height: 100%;                /* match height of carousel */
+  object-fit: contain;         /* full image visible, no cropping */
+  display: block;
 }
+
+/* Infinite scroll animation (fix for blank gap) */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);  /* only scroll half the track width */
+  }
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 600px) {
+  .carousel {
+    aspect-ratio: auto;       /* remove fixed ratio */
+    height: 250px;            /* fallback height on small screens */
+  }
+
+  .carousel-track img {
+    object-fit: contain;
+  }
+}
+
 
 /* Buttons */
 .scroll-btn {
