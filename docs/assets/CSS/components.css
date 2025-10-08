@@ -31,7 +31,7 @@
 }
 
 :root {
-  --scroll-speed: 15s; /* slower = smoother */
+  --scroll-speed: 10s; /* slower = smoother */
   --image-count: 5;
 }
 
@@ -58,7 +58,7 @@
 /* Each image takes up full container width */
 .carousel-track img {
   flex: 0 0 20%; /* 100% ÷ 5 images per set */
-  width: 20%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
