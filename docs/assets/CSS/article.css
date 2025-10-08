@@ -70,3 +70,11 @@
   display: block;
   margin: 0 auto 1rem;  /* centers and spaces images */
 }
+
+/* Center the main page layout */
+.layout-container {
+  max-width: 900px;      /* or whatever width looks good — try 800–1000px */
+  margin: 0 auto;        /* centers it horizontally */
+  padding: 0 1rem;       /* optional: adds breathing room on smaller screens */
+  box-sizing: border-box;
+}
