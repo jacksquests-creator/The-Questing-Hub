@@ -34,6 +34,7 @@
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(178, 148, 255, 0.3);
   margin: 0 auto;
+     flex: 0 1 800px; /* lock content width */
 }
 
 /* Page layout */
@@ -49,7 +50,7 @@
 }
 
 .page-layout main {
-    flex: 0 1 800px; /* lock content width */
+
   max-width: 800px;
   margin: 0 auto;
 }
