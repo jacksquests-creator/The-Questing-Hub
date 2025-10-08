@@ -52,14 +52,14 @@
 /* Track (the long image strip) */
 .carousel-track {
   display: flex;
-  width: calc(200%); /* doubled because we duplicate images for looping */
+  width: calc(var(--image-count)) * 2 * 100; /* doubled because we duplicate images for looping */
   animation: scroll var(--scroll-speed) linear infinite;
 }
 
 /* Each image */
 .carousel-track img {
-  flex: 0 0 auto;
-  width: 100%;
+  flex: 0 0 calc(100% / var(--image-count));
+  width: calc(100% / var(--image-count));
   height: 100%;
   object-fit: cover; /* or contain, if you prefer full image visibility */
   display: block;
@@ -72,7 +72,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
