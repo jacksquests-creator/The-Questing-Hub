@@ -30,10 +30,9 @@
   font-size: 0.95em;
 }
 
-/* Carousel */
 :root {
-  --scroll-speed: 10s;   /* adjust for faster/slower speed */
-  --image-count: 5;      /* number of unique images */
+  --scroll-speed: 25s; /* slower = smoother */
+  --image-count: 5;
 }
 
 /* Outer box */
@@ -49,40 +48,40 @@
   border: 1px solid #45a29e;
 }
 
-/* Track (the long image strip) */
+/* Track with double set of images */
 .carousel-track {
   display: flex;
-  width: calc(var(--image-count)) * 2 * 100; /* doubled because we duplicate images for looping */
+  width: calc(200%); /* two full sets of images */
   animation: scroll var(--scroll-speed) linear infinite;
 }
 
-/* Each image */
+/* Each image takes up full container width */
 .carousel-track img {
-  flex: 0 0 calc(100% / var(--image-count));
-  width: calc(100% / var(--image-count));
+  flex: 0 0 20%; /* 100% ÷ 5 images per set */
+  width: 20%;
   height: 100%;
-  object-fit: cover; /* or contain, if you prefer full image visibility */
+  object-fit: cover;
   display: block;
-  max-width: 800px;
 }
 
-/* Animation: move half the total width (i.e. one set of images) */
+/* Smooth continuous scroll */
 @keyframes scroll {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translateX(-50%); /* move one full set width */
   }
 }
 
-/* 📱 Responsive adjustments */
+/* Responsive */
 @media (max-width: 600px) {
   .carousel {
     aspect-ratio: auto;
     height: 250px;
   }
 }
+
 
 
 /* 📱 Responsive adjustments */
