@@ -58,12 +58,12 @@
 
 /* Each image */
 .carousel-track img {
-  flex: 0 0 calc(100% / var(--image-count));
+  flex: 0 0 auto;
   width: 100%;
   height: 100%;
   object-fit: cover; /* or contain, if you prefer full image visibility */
   display: block;
-  max-width: 800px;
+  max-width: none;
 }
 
 /* Animation: move half the total width (i.e. one set of images) */
