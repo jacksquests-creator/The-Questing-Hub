@@ -50,7 +50,6 @@
 /* The long image strip */
 .carousel-track {
   display: flex;
-  width: calc(10 * 100%); /* 10 images total (5 originals + 5 duplicates) */
   animation: scroll var(--scroll-speed) linear infinite;
 }
 
@@ -58,6 +57,7 @@
 .carousel-track img {
   width: calc(100% / 5); /* 5 images per set */
   height: 100%;
+  max-width: 800px;
   object-fit: cover;
   flex-shrink: 0;
   display: block;
