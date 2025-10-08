@@ -31,7 +31,7 @@
 }
 
 :root {
-  --scroll-speed: 25s; /* slower = smoother */
+  --scroll-speed: 15s; /* slower = smoother */
   --image-count: 5;
 }
 
