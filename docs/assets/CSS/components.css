@@ -63,7 +63,7 @@
   height: 100%;
   object-fit: cover; /* or contain, if you prefer full image visibility */
   display: block;
-  max-width: none;
+  max-width: 800px;
 }
 
 /* Animation: move half the total width (i.e. one set of images) */
@@ -72,7 +72,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
