@@ -53,6 +53,8 @@
   display: flex;
   width: calc(200%); /* two full sets of 5 images */
   animation: scroll var(--scroll-speed) linear infinite;
+  aspect-ratio: 16 / 9;
+  max-width: 800px;
 }
 
 /* Each image container (slide) */
