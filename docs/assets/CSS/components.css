@@ -32,7 +32,7 @@
 
 :root {
   --image-count: 5;
-  --scroll-speed: 10s;
+  --scroll-speed: 20s;
 }
 
 /* Outer container */
@@ -51,10 +51,8 @@
 /* Track that scrolls */
 .carousel-track {
   display: flex;
-  width: calc(200%); /* two full sets of 5 images */
+  width: calc(var(--image-count) * 2 * 100%);
   animation: scroll var(--scroll-speed) linear infinite;
-  aspect-ratio: 16 / 9;
-  max-width: 800px;
   will-change: transform;
    transform: translateZ(0);
   backface-visibility: hidden;
