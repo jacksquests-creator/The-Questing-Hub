@@ -36,7 +36,7 @@
 
 :root {
   --image-count: 5;
-  --scroll-speed: 20s;
+  --scroll-speed: 5s;
 }
 
 /* Outer container */
