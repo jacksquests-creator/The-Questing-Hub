@@ -30,6 +30,10 @@
   font-size: 0.95em;
 }
 
+/* ==========================
+   CAROUSEL
+   ========================== */
+
 :root {
   --image-count: 5;
   --scroll-speed: 20s;
@@ -51,7 +55,7 @@
 /* Track that scrolls */
 .carousel-track {
   display: flex;
-  width: calc(var(--image-count) * 2 * 100%);
+  width: calc(var(--image-count) * 2 * 100%) / var(--image-count);
   animation: scroll var(--scroll-speed) linear infinite;
   will-change: transform;
    transform: translateZ(0);
@@ -60,7 +64,7 @@
 
 /* Each image container (slide) */
 .slide {
-  flex: 0 0 calc(100% / var(--image-count));
+  flex: 0 0 100%;
   height: 100%;
   object-fit: cover;
   display: block ;
