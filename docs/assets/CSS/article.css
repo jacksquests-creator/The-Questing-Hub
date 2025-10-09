@@ -84,3 +84,28 @@
   padding: 0 1rem;       /* optional: adds breathing room on smaller screens */
   box-sizing: border-box;
 }
+
+/* ==========================
+   CLEANUP IMAGES
+   ========================== */
+
+.cleanup-images {
+  display: flex;
+  justify-content: center;  /* centers images in container */
+  align-items: center;
+  gap: 10px;                /* space between images */
+  max-width: 800px;         /* total width limit */
+  margin: 0 auto;           /* centers the whole block on page */
+}
+
+.cleanup-images img {
+  width: 100%;              /* each image takes up equal share of container */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Make sure the two images share space equally */
+.cleanup-images img {
+  flex: 1;                  /* each image gets equal width */
+}
+
