@@ -90,22 +90,18 @@
    ========================== */
 
 .cleanup-images {
-  display: flex;
-  justify-content: center;  /* centers images in container */
-  align-items: center;
-  gap: 10px;                /* space between images */
-  max-width: 800px;         /* total width limit */
-  margin: 0 auto;           /* centers the whole block on page */
+  display: flex;              /* puts images side by side */
+  justify-content: center;    /* centers them horizontally */
+  align-items: center;        /* vertically align */
+  gap: 10px;                  /* space between images */
+  max-width: 800px;           /* total container width */
+  margin: 0 auto;             /* center the whole block */
 }
 
 .cleanup-images img {
-  width: 100%;              /* each image takes up equal share of container */
-  height: auto;
-  object-fit: cover;
-}
-
-/* Make sure the two images share space equally */
-.cleanup-images img {
-  flex: 1;                  /* each image gets equal width */
+  flex: 1 1 0;                /* each image shares space equally */
+  max-width: calc(50% - 5px); /* half of 800px minus half the gap */
+  height: auto;               /* maintain aspect ratio */
+  display: block;             /* removes inline spacing quirks */
 }
 
