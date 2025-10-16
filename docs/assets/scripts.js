@@ -105,6 +105,13 @@ function getTagForPage() {
   return null; // Default = index page
 }
 
+// --- Tag Link Mapping ---
+const tagLinks = {
+  reviews: '/thequestinghub/posts/reviews/',
+  guides: '/thequestinghub/posts/guides/',
+  features: '/thequestinghub/posts/features/'
+};
+
 // --- Render Article Cards ---
 function renderArticles(articles) {
   grid.innerHTML = '';
@@ -118,9 +125,14 @@ function renderArticles(articles) {
     const card = document.createElement('div');
     card.className = 'article';
 
-    const tagsHTML = article.tags
-      ? article.tags.map(t => `<a href="${t}.html" class="tag">${t}</a>`).join(' ')
-      : '';
+
+
+const tagsHTML = article.tags
+  ? article.tags.map(t => {
+      const url = tagLinks[t.toLowerCase()] || `/${t}.html`;
+      return `<a href="${url}" class="tag">${t}</a>`;
+    }).join(' ')
+  : '';
 card.innerHTML = `
       <a href="${article.link}">
     <img src="${article.image}" alt="${article.title}">
