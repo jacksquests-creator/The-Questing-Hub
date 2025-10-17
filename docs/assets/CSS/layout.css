@@ -40,10 +40,41 @@ main {
 footer {
   background: #333;
   color: #fff;
-  padding: 1em;
-  text-align: center;
-  height: 100px;
+  padding: 1em 2em;
+  height: auto; /* Let it grow naturally when stacked */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping when screen is narrow */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+}
+
+.footer-center { text-align: center; }
+.footer-right { text-align: right; }
+
+/* 📱 Responsive Footer: Stack vertically on small screens */
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    padding: 1.5em 1em;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Layout Container */
