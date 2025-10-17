@@ -99,9 +99,9 @@ const grid = document.getElementById('grid');
 // --- Detect Which Tag This Page Should Show ---
 function getTagForPage() {
   const path = window.location.pathname.toLowerCase();
-  if (path.includes('guide')) return 'guide';
-  if (path.includes('review')) return 'review';
-  if (path.includes('feature')) return 'feature';
+  if (path.includes('guide')) return 'guides';
+  if (path.includes('review')) return 'reviews';
+  if (path.includes('feature')) return 'features';
   return null; // Default = index page
 }
 
