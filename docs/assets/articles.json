@@ -5,7 +5,7 @@
     "image": "assets/images/goblin-cleanup-images/152293_Goblin_Cleanup.webp",
     "link": "/thequestinghub/posts/reviews/review-articles/goblin-cleanup-early-access-review.html",
     "date": "2025-10-02",
-    "tags": ["review"]
+    "tags": ["reviews"]
   },
   {
     "title": "Using the Grid Layout",
@@ -13,7 +13,7 @@
     "image": "images/article2.jpg",
     "link": "articles/article2.html",
     "date" : "2024-09-15",
-    "tags": ["guide"]
+    "tags": ["guides"]
   },
   {
     "title": "Deploying on Netlify",
@@ -21,7 +21,7 @@
     "image": "images/article3.jpg",
     "link": "articles/article3.html",
     "date" : "2024-10-04",
-    "tags": ["feature"]
+    "tags": ["features"]
   }
   
 
