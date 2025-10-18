@@ -151,7 +151,7 @@ card.innerHTML = `
 // --- Fetch and Display Articles ---
 async function loadArticles() {
   try {
-    const response = await fetch('../assets/articles.json');
+    const response = await fetch('/assets/articles.json');
     const articles = await response.json();
 
     // Sort by newest first
