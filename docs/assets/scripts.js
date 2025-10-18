@@ -107,9 +107,9 @@ function getTagForPage() {
 
 // --- Tag Link Mapping ---
 const tagLinks = {
-  reviews: '/thequestinghub/posts/reviews/',
-  guides: '/thequestinghub/posts/guides/',
-  features: '/thequestinghub/posts/features/'
+  reviews: '../../posts/reviews/',
+  guides: '../../posts/guides/',
+  features: '../../thequestinghub/posts/features/'
 };
 
 // --- Render Article Cards ---
@@ -151,7 +151,7 @@ card.innerHTML = `
 // --- Fetch and Display Articles ---
 async function loadArticles() {
   try {
-    const response = await fetch('/thequestinghub/assets/articles.json');
+    const response = await fetch('../assets/articles.json');
     const articles = await response.json();
 
     // Sort by newest first
